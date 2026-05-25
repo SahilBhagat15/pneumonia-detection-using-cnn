@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PneumoScan AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">
+            PneumoScan AI
+        </div>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/about">About</a></li>
+
+            <li><a href="/services">Services</a></li>
+
+            <li><a href="/contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <!-- Left Side -->
+
+        <div class="left-section">
+
+            <h1>
+                AI Powered Pneumonia Detection System
+            </h1>
+
+            <p>
+                Upload chest X-ray images and detect pneumonia instantly
+                using Deep Learning and Convolutional Neural Networks.
+            </p>
+
+            <div class="features">
+
+                <div class="feature-box">
+                    Fast Detection
+                </div>
+
+                <div class="feature-box">
+                    Deep Learning AI
+                </div>
+
+                <div class="feature-box">
+                    Medical Imaging
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Upload Card -->
+
+        <div class="upload-card">
+
+            <h2>Upload X-Ray</h2>
+
+            <form action="/predict" method="POST" enctype="multipart/form-data">
+
+                <div class="upload-box">
+
+                    <input type="file" name="file" required>
+
+                </div>
+
+                <button type="submit">
+                    Analyze Image
+                </button>
+
+            </form>
+
+            {% if prediction %}
+
+            <div class="result">
+
+                <h3>Prediction Result</h3>
+
+                <p>{{ prediction }}</p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
