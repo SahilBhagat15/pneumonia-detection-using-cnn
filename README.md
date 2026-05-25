@@ -36,19 +36,11 @@ The system allows users to upload chest X-ray images and instantly receive predi
 
 # Dataset
 
-## Dataset
+Chest X-Ray Pneumonia Dataset
 
-The dataset used in this project is too large to upload directly to GitHub.
-
-Download Dataset Here:
-
+Dataset Link:
 https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
-After downloading, place the dataset folders inside:
-
-dataset/train
-dataset/test
-dataset/val
 ---
 
 # Project Structure
